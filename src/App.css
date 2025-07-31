@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+/* General app styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Light and dark mode backgrounds */
+body.bg-light {
+  background-color: #f8f9fa !important;
+  color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body.bg-dark {
+  background-color: #121212 !important;
+  color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Card styling */
+.card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Light mode card */
+.bg-light .card {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode card */
+.bg-dark .card {
+  background-color: #1e1e1e;
+  color: blue;
+}
+
+/* Navbar contrast fixes */
+.navbar-light .form-select,
+.navbar-light .form-control {
+  background-color: #ffffff;
+  color: #000;
+  border: 1px solid #ccc;
+}
+
+.navbar-dark .form-select,
+.navbar-dark .form-control {
+  background-color: #343a40;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+/* Spinner styling */
+.spinner-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Button hover for dark/light mode */
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-dark:disabled {
+  background-color: #6c757d;
+  border-color: 2px green;
+}
+
+/* Responsive text header */
+h2 {
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
